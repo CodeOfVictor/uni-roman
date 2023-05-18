@@ -1,7 +1,7 @@
 // All constant variables could be removed, but I have decided to do it in several lines and constants to make the code clearer and not saturated lines.
 
 // Test all cases
-test('all', function (assert) {
+test("Example", function(assert) {
   // Test case 1
   const result1 = convertIntegerToRoman(1);
   const expected1 = { value: 'I', message: '', result: true };
