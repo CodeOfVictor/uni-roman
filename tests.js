@@ -1,7 +1,7 @@
 // All constant variables could be removed, but I have decided to do it in several lines and constants to make the code clearer and not saturated lines.
 
 // Test all cases
-QUnit.test("Example", function(assert) {
+test("Example", function(assert) {
   // Test case 1
   assert.propEqual(convertIntegerToRoman(1), { value: 'I', message: '', result: true }, 'Test Case 1');
 
@@ -47,5 +47,3 @@ QUnit.test("Example", function(assert) {
   // Test case 15
   assert.propEqual(convertRomanToInteger(''), { value: 0, message: 'Empty input', result: false }, 'Test Case 15');
 });
-
-
