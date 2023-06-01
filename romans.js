@@ -16,7 +16,7 @@ function init() {
 
 
   modeCheckbox.addEventListener('change', function(e) {
-    modeRomanOrInteger = getModeTitle(e.target.checked);
+	modeRomanOrInteger = getModeTitle(e.target.checked);
 	header.innerHTML = modeRomanOrInteger;
   });
 
