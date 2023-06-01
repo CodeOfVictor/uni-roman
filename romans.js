@@ -18,9 +18,6 @@ function init() {
   });
 
   const getModeTitle = function(integerToRoman) {
-	gtag('event', 'change_mode', {
-		'integerToRoman': integerToRoman
-	});
     return integerToRoman ? 'Integer To Roman' : 'Roman To Integer';
   };
 
@@ -48,6 +45,9 @@ function init() {
 // UI directly. The JSON object contains the result (ok/nok), the value
 // and an error message if needed
 const convertRomanToInteger = function(roman) {
+	gtag('event', 'change_mode', {
+		'integerToRoman': integerToRoman
+	});
 
   var response = {
     value: 0, 
