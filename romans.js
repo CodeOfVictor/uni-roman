@@ -265,4 +265,4 @@ if (!String.prototype.repeat) {
 }
 
 // Exporting the necessary functions to use them in a web application
-export { init, convertRomanToInteger, convertIntegerToRoman };
+//export { init, convertRomanToInteger, convertIntegerToRoman };
