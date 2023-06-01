@@ -26,7 +26,7 @@ test("Example", function(assert) {
 
   // Test case 8
   assert.propEqual(convertIntegerToRoman(3999), { value: 'MMMCMXCIX', message: '', result: true }, 'Test Case 8 with integer that has a 9');
-
+*/
   // Test case 9
   assert.propEqual(convertRomanToInteger('I'), { value: 1, message: '', result: true }, 'Test Case 9');
 
@@ -47,5 +47,5 @@ test("Example", function(assert) {
 
   // Test case 15
   //assert.propEqual(convertRomanToInteger(''), { value: 0, message: 'Empty input', result: false }, 'Test Case 15');
-  */
+  
 });
