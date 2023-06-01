@@ -1,10 +1,3 @@
-window.dataLayer = window.dataLayer || [];
-function gtag(){dataLayer.push(arguments);}
-gtag('js', new Date());
-
-gtag('config', 'G-1NR5GCHP7Y');
-
-
 // Constants for the literals
 const INVALID_ROMAN = 'Please enter a valid roman';
 const INVALID_INTEGER = 'Please enter a valid integer';
@@ -21,13 +14,13 @@ function init() {
 
 
   modeCheckbox.addEventListener('change', function(e) {
-	gtag('event', 'change_mode', {
-		'transformationChange': transformationChange
-	});
     header.innerHTML = getModeTitle(e.target.checked);
   });
 
   const getModeTitle = function(integerToRoman) {
+	gtag('event', 'change_mode', {
+		'integerToRoman': integerToRoman
+	});
     return integerToRoman ? 'Integer To Roman' : 'Roman To Integer';
   };
 
