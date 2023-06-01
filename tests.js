@@ -1,8 +1,3 @@
-// All constant variables could be removed, but I have decided to do it in several lines and constants to make the code clearer and not saturated lines.
-import { convertIntegerToRoman, convertRomanToInteger } from './roman.js';
-
-// All constant variables and test cases...
-
 // Test all cases
 test("Example", function(assert) {
   // Test case 1
