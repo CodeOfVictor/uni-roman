@@ -3,6 +3,8 @@ const INVALID_ROMAN = 'Please enter a valid roman';
 const INVALID_INTEGER = 'Please enter a valid integer';
 const OUT_OF_RANGE = 'Out of range (1-3999)';
 
+var modeRomanOrInteger;
+
 function init() { 
   
   // Load elements once to avoid repetition on every invocation
@@ -14,7 +16,8 @@ function init() {
 
 
   modeCheckbox.addEventListener('change', function(e) {
-    header.innerHTML = getModeTitle(e.target.checked);
+    modeRomanOrInteger = getModeTitle(e.target.checked);
+	header.innerHTML = modeRomanOrInteger;
   });
 
   const getModeTitle = function(integerToRoman) {
