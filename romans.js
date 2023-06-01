@@ -105,6 +105,10 @@ const convertRomanToInteger = function(roman) {
 // UI directly. The JSON object contains the result (ok/nok), the value
 // and an error message if needed
 const convertIntegerToRoman = function(num) {
+	
+	gtag('event', 'integer_to_roman', {
+		'num': num
+	});
   var response = {
     value: 0,
     message: '',
