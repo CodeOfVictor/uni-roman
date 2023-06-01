@@ -8,6 +8,9 @@ module.exports = {
         "sourceType": "module"
     },
     "rules": {
+        "indent": [
+            "off"
+        ],
         "no-cond-assign": [
             "error",
             "always"
