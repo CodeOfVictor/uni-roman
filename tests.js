@@ -1,9 +1,12 @@
 // All constant variables could be removed, but I have decided to do it in several lines and constants to make the code clearer and not saturated lines.
+import { convertIntegerToRoman, convertRomanToInteger } from './roman.js';
+
+// All constant variables and test cases...
 
 // Test all cases
 test("Example", function(assert) {
   // Test case 1
-  /*
+  
   assert.propEqual(convertIntegerToRoman(1), { value: 'I', message: '', result: true }, 'Test Case 1');
 
   // Test case 2
@@ -26,7 +29,7 @@ test("Example", function(assert) {
 
   // Test case 8
   assert.propEqual(convertIntegerToRoman(3999), { value: 'MMMCMXCIX', message: '', result: true }, 'Test Case 8 with integer that has a 9');
-*/
+
   // Test case 9
   assert.propEqual(convertRomanToInteger('I'), { value: 1, message: '', result: true }, 'Test Case 9');
 
