@@ -33,6 +33,13 @@ function init() {
     var conversion = modeCheckbox.checked ? convertIntegerToRoman(inputValue) : convertRomanToInteger(inputValue);
     if (conversion.result) {
       outputArea.innerHTML = conversion.value;
+
+      // Track conversion event with gtag
+      gtag('event', 'conversion', {
+        'event_category': 'Conversion',
+        'event_label': modeRomanOrInteger,
+        'value': inputValue
+      });
     } else {
       alert(conversion.message);
     }
@@ -105,10 +112,6 @@ const convertRomanToInteger = function(roman) {
 // UI directly. The JSON object contains the result (ok/nok), the value
 // and an error message if needed
 const convertIntegerToRoman = function(num) {
-	
-	gtag('event', 'integer_to_roman', {
-		'num': num
-	});
   var response = {
     value: 0,
     message: '',
@@ -267,6 +270,39 @@ if (!String.prototype.repeat) {
     return rpt;
   };
 }
+
+// Function to send gtag event when converting from Roman to Integer
+const sendRomanToIntegerEvent = function() {
+  gtag('event', 'Conversion', {
+    'event_category': 'Roman To Integer',
+    'event_label': 'Conversion from Roman to Integer',
+  });
+};
+
+// Function to send gtag event when converting from Integer to Roman
+const sendIntegerToRomanEvent = function() {
+  gtag('event', 'Conversion', {
+    'event_category': 'Integer To Roman',
+    'event_label': 'Conversion from Integer to Roman',
+  });
+};
+
+// Update the conversion button event listeners to include gtag events
+convertButton.addEventListener('click', function() {
+  var inputValue = inputArea.value;
+  var conversion = modeCheckbox.checked ? convertIntegerToRoman(inputValue) : convertRomanToInteger(inputValue);
+  if (conversion.result) {
+    outputArea.innerHTML = conversion.value;
+    if (modeCheckbox.checked) {
+      sendIntegerToRomanEvent();
+    } else {
+      sendRomanToIntegerEvent();
+    }
+  } else {
+    alert(conversion.message);
+  }
+});
+
 
 // Exporting the necessary functions to use them in a web application
 //export { init, convertRomanToInteger, convertIntegerToRoman };
