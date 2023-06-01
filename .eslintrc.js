@@ -8,16 +8,12 @@ module.exports = {
         "sourceType": "module"
     },
     "rules": {
-        "indent": [
-            "off"
-        ],
         "no-cond-assign": [
             "error",
             "always"
         ],
         "indent": [
-            "error",
-            2
+            "off"
         ],
         "linebreak-style": [
             "error",
