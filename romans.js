@@ -14,6 +14,9 @@ function init() {
 
 
   modeCheckbox.addEventListener('change', function(e) {
+	gtag('event', 'change_mode', {
+		'transformationChange': transformationChange
+	});
     header.innerHTML = getModeTitle(e.target.checked);
   });
 
